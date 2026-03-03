@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliette Shopping - Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="number"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f8f8;
+        }
+        .edit-btn, .delete-btn {
+            cursor: pointer;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+        .edit-btn {
+            background-color: #007bff;
+        }
+        .delete-btn {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Connexion Administrateur</h1>
+    <form id="loginForm">
+        <input type="email" id="adminEmail" placeholder="Email" required>
+        <input type="password" id="adminPassword" placeholder="Mot de passe" required>
+        <button type="submit">Se connecter</button>
+    </form>
+
+    <h1>Gestion des Produits</h1>
+    <form id="productForm">
+        <input type="text" id="productName" placeholder="Nom du produit" required>
+        <input type="number" id="productPrice" placeholder="Prix" required>
+        <input type="number" id="productStock" placeholder="Quantité en stock" required>
+        <button type="submit">Ajouter un produit</button>
+    </form>
+
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prix</th>
+                <th>Stock</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les produits seront ajoutés ici -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    const loginForm = document.getElementById('loginForm');
+    const productForm = document.getElementById('productForm');
+    const productTable = document.getElementById('productTable').getElementsByTagName('tbody')[0];
+    let isAdmin = false; // Variable pour vérifier si l'utilisateur est connecté
+
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const email = document.getElementById('adminEmail').value;
+        const password = document.getElementById('adminPassword').value;
+
+        // Simuler la connexion (remplacez par votre logique d'authentification)
+        if (email === 'admin@example.com' && password === 'password') {
+            isAdmin = true;
+            alert('Connexion réussie !');
+            loginForm.style.display = 'none'; // Cacher le formulaire de connexion
+            productForm.style.display = 'block'; // Afficher le formulaire de produit
+            loadProducts(); // Charger les produits (si nécessaire)
+        } else {
+            alert('Identifiants incorrects.');
+        }
+    });
+
+    productForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (!isAdmin) return;
+
+        const name = document.getElementById('productName').value;
+        const price = parseFloat(document.getElementById('productPrice').value);
+        const stock = parseInt(document.getElementById('productStock').value);
+
+        const newRow = productTable.insertRow();
+        newRow.innerHTML = `
+            <td>${name}</td>
+            <td>${price.toFixed(2)} €</td>
+            <td>${stock}</td>
+            <td>
+                <button class="edit-btn" onclick="editProduct(this)">Modifier</button>
+                <button class="delete-btn" onclick="deleteProduct(this)">Supprimer</button>
+            </td>
+        `;
+
+        productForm.reset();
+    });
+
+    function editProduct(button) {
+        const row = button.parentElement.parentElement;
+        const name = row.cells[0].innerText;
+        const price = parseFloat(row.cells[1].innerText);
+        const stock = parseInt(row.cells[2].innerText);
+
+        document.getElementById('productName').value = name;
+        document.getElementById('productPrice').value = price;
+        document.getElementById('productStock').value = stock;
+
+        row.remove(); // Supprimer la ligne pour remplacer
+    }
+
+    function deleteProduct(button) {
+        const row = button.parentElement.parentElement;
+        productTable.deleteRow(row.rowIndex - 1); // Supprimer la ligne
+    }
+
+    // Fonction pour charger les produits (à développer selon vos besoins)
+    function loadProducts() {
+        // Implémentez la logique pour charger les produits depuis la base de données
+    }
+</script>
+
+</body>
+</html>

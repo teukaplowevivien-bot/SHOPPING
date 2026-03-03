@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande et Paiement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .product, .payment-section {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin: 10px 0;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .product:hover, .payment-section:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .product span, .payment-section label {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .product button, .payment-section button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 10px;
+        }
+        .product button:hover, .payment-section button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 20px;
+            background: #e7f3ff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .cart-item:hover {
+            transform: scale(1.02);
+        }
+        #totalPrix {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 10px;
+            text-align: right;
+        }
+        .payment-input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        .payment-input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .notification, .error-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .error-message {
+            color: red;
+            border: 1px solid #f5c6cb;
+            background-color: #f8d7da;
+        }
+        .notification {
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            background-color: #d4edda;
+        }
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        .search-input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Produits</h1>
+    <input type="text" id="searchInput" class="search-input" placeholder="Rechercher un produit..." onkeyup="rechercherProduits()">
+    <div id="produits" class="products">
+        <div class="product" data-nom="T-SHIRT" data-prix="4000">
+            <span>T-SHIRT - 6500FCFA</span>
+            <button onclick="ajouterAuPanier('Produit 1', 10)">Ajouter</button>
+            <div id="error1" class="error-message"></div>
+        </div>
+        <div class="product" data-nom="JOYCE PHIL" data-prix="5000">
+            <span>JOYCE PHIL - 10000FCFA</span>
+            <button onclick="ajouterAuPanier('Produit 2', 15)">Ajouter</button>
+            <div id="error2" class="error-message"></div>
+        </div>
+        <div class="product" data-nom="Produit 3" data-prix="20">
+            <span> CROP-TOP- 13000FCFA</span>
+            <button onclick="ajouterAuPanier('Produit 3', 20)">Ajouter</button>
+            <div id="error3" class="error-message"></div>
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2>Mon Panier</h2>
+        <div id="panierContenu"></div>
+        <div id="totalPrix">Total: €0</div>
+    </div>
+
+    <div class="payment-section">
+        <h2>Paiement</h2>
+        <label for="nom">Nom sur la carte:</label>
+        <input type="text" id="nom" class="payment-input" placeholder="Nom complet" required>
+        
+        <label for="numero">Numéro de carte:</label>
+        <input type="text" id="numero" class="payment-input" placeholder="1234 5678 9012 3456" required>
+        
+        <label for="expiration">Date d'expiration:</label>
+        <input type="text" id="expiration" class="payment-input" placeholder="MM/AA" required>
+        
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" class="payment-input" placeholder="123" required>
+        
+        <button onclick="effectuerPaiement()">Payer</button>
+    </div>
+
+    <div class="notification" id="notification">
+        Paiement effectué avec succès !
+    </div>
+    <div class="error-message" id="paymentError"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.js"></script>
+<script>
+
+    
+    let panier = [];
+
+    function ajouterAuPanier(nom, prix) {
+        const produitExist = panier.find(item => item.nom === nom);
+        const errorMessageElement = document.getElementById(`error${nom.charAt(nom.length - 1)}`);
+        errorMessageElement.innerHTML = ''; // Réinitialiser le message d'erreur
+
+        if (produitExist) {
+            produitExist.quantite += 1;
+        } else {
+            panier.push({ nom, prix, quantite: 1 });
+        }
+        afficherPanier();
+
+
+        // Notification avec Toastify
+    Toastify({
+            text: `${nom} a été ajouté au panier !`,
+            duration: 3000,
+            gravity: "top",
+            position: 'right',
+            backgroundColor: "green",
+        }).showToast();
+    
+    }
+
+    function modifierQuantite(index, operation) {
+        if (operation === 'increase') {
+            panier[index].quantite += 1;
+        } else if (operation === 'decrease' && panier[index].quantite > 1) {
+            panier[index].quantite -= 1;
+        }
+        afficherPanier();
+    }
+
+    function supprimerDuPanier(index) {
+        const item = panier[index];
+        const panierContenu = document.getElementById('panierContenu');
+        
+        const cartItem = panierContenu.children[index];
+        cartItem.classList.add('removing');
+        
+        setTimeout(() => {
+            panier.splice(index, 1);
+            afficherPanier();
+            
+            // Notification avec Toastify
+            Toastify({
+                text: `${item.nom} a été supprimé du panier.`,
+                duration: 3000,
+                gravity: "top",
+                position: 'right',
+                backgroundColor: "red",
+            }).showToast();
+        }, 300); // Délai pour l'animation
+    } 
+
+    function afficherPanier() {
+        const panierContenu = document.getElementById('panierContenu');
+        const totalPrix = document.getElementById('totalPrix');
+        panierContenu.innerHTML = '';
+        let total = 0;
+
+        panier.forEach((item, index) => {
+            const sousTotal = item.prix * item.quantite;
+            panierContenu.innerHTML += `
+                <div class="cart-item">
+                    <span>${item.nom} - €${item.prix} x ${item.quantite} = €${sousTotal.toFixed(2)}</span>
+                    <div>
+                        <button onclick="modifierQuantite(${index}, 'decrease')">-</button>
+                        <button onclick="modifierQuantite(${index}, 'increase')">+</button>
+                        <button onclick="supprimerDuPanier(${index})">Supprimer</button>
+                    </div>
+                </div>`;
+            total += sousTotal;
+        });
+
+        totalPrix.innerHTML = `Total: €${total.toFixed(2)}`;
+    }
+
+    function rechercherProduits() {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toLowerCase();
+        const produits = document.querySelectorAll('.product');
+
+        produits.forEach(produit => {
+            const nom = produit.getAttribute('data-nom').toLowerCase();
+            if (nom.includes(filter)) {
+                produit.style.display = '';
+            } else {
+                produit.style.display = 'none';
+            }
+        });
+    }
+
+    
+    function filtrerProduits() {
+        const recherche = document.getElementById('searchInput').value.toLowerCase();
+        const produits = document.querySelectorAll('.product');
+
+        produits.forEach(produit => {
+            const nom = produit.getAttribute('data-nom').toLowerCase();
+            if (nom.includes(recherche)) {
+                produit.style.display = 'flex';
+            } else {
+                produit.style.display = 'none';
+            }
+        });
+    }
+
+    function effectuerPaiement() {
+        const nom = document.getElementById('nom').value;
+        const numero = document.getElementById('numero').value;
+        const expiration = document.getElementById('expiration').value;
+        const cvv = document.getElementById('cvv').value;
+        const paymentErrorElement = document.getElementById('paymentError');
+        paymentErrorElement.innerHTML = ''; // Réinitialiser le message d'erreur
+
+        // Validation des champs de paiement
+        if (!nom || !numero || !expiration || !cvv) {
+            paymentErrorElement.innerHTML = 'Tous les champs doivent être remplis. Veuillez vérifier votre saisie.';
+            return;
+        }
+        if (!/^\d{16}$/.test(numero.replace(/\s/g, ''))) {
+            paymentErrorElement.innerHTML = 'Le numéro de carte doit avoir 16 chiffres. Vérifiez votre saisie.';
+            return;
+        }
+        if (!/^(0[1-9]|1[0-2])\/?(\d{4}|\d{2})$/.test(expiration)) {
+            paymentErrorElement.innerHTML = 'Veuillez entrer une date d\'expiration valide (MM/AA).';
+            return;
+        }
+        if (!/^\d{3,4}$/.test(cvv)) {
+            paymentErrorElement.innerHTML = 'Le CVV doit être constitué de 3 ou 4 chiffres. Vérifiez votre saisie.';
+            return;
+        }
+
+        // Simulation d'une erreur de paiement
+        const success = Math.random() > 0.2; // 80% de chance de succès
+        if (!success) {
+            paymentErrorElement.innerHTML = 'Erreur de paiement. Assurez-vous que les informations de votre carte sont correctes et que vous avez suffisamment de fonds.';
+            return;
+        }
+
+        alert(`Paiement effectué avec succès !\nNom: ${nom}\nMontant: ${document.getElementById('totalPrix').innerText}`);
+        enregistrerPaiement(nom, document.getElementById('totalPrix').innerText);
+        afficherNotification();
+        // Réinitialiser le panier après le paiement
+        panier = [];
+        afficherPanier();
+        document.getElementById('nom').value = '';
+        document.getElementById('numero').value = '';
+        document.getElementById('expiration').value = '';
+        document.getElementById('cvv').value = '';
+    }
+
+    function enregistrerPaiement(nom, montant) {
+        console.log(`Paiement enregistré: ${nom}, Montant: ${montant}`);
+    }
+
+    function afficherNotification() {
+        const notification = document.getElementById('notification');
+        notification.style.display = 'block';
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 3000); // Masquer après 3 secondes
+    }
+</script>
+
+</body>
+</html>

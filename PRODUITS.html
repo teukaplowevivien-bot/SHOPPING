@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+    <meta charset="UTF-8">
+    <link rel="preconect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicons@4.1.0/css/remixicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-COMMERCE</title>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, 'roboto condensed';
+
+   
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --main-color: #f0f0f0;
+    --other-color: #ffc633;
+    --second-color:#616060;
+
+    --h1-font: 5.5rem;
+    --h2-font: 3.5rem;
+    --p-font: 1rem;
+}
+body{
+    height: 100%;
+}
+.conteneur{
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7px;
+    transform: translateY(0);
+    animation: descendre0 1.5s infinite;
+ 
+}
+ @keyframes descendre0{
+        0%{
+            transform: translateY(0);
+        }
+        100%{
+            transform: translateY(1.8vh);
+        }
+   
+ }
+
+.conteneur .one{
+    color: orange;
+    
+}
+.conteneur .two span{
+    color: orange;
+}
+.conteneur .three span{
+    color: orange;
+}
+.conteneur2{
+    padding: 10PX;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: black;
+}
+.conteneur2 .five:hover{
+    background: #fff;
+    color: #000;
+}
+.conteneur2 a{
+    text-decoration: none;
+    color: #fff;
+}
+.conteneur2 .six span{
+    color: orange;
+}
+/*HEADER*/
+header
+{
+    background-image:linear-gradient(rgba(7, 7, 7, 0.6), rgba(0, 0, 0, 0.6)),  url(photos/IMG-20241029-WA0038.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/*ACCUEIL*/
+
+
+
+
+ .er{
+
+display: inline-table;
+justify-content: center;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 999;
+height: 100%;
+left: 0;
+width: 100%;
+
+}
+
+
+
+
+ul{
+    list-style: none;
+   display: flex;
+   justify-content: center;
+   transform: scale(1.5s);
+   transition: 0.6s;
+    display:inline-block ;
+    
+}
+
+ 
+@media only screen and (max-width:1320px)
+{
+   
+    .er
+    {
+        font-size: 12px;
+     display: block;
+       
+
+    }
+
+
+}
+
+
+
+ul{
+    list-style: none;
+   display: flex;
+   justify-content: center;
+   transform: scale(1.5s);
+   transition: 0.6s;
+   position: fixed;
+    color: orange;
+   
+}
+
+ul li a{
+   
+   text-decoration: none; 
+      color: orange;
+border: 1px solid transparent;
+ 
+padding: 10px 100px;
+   
+
+align-items: ce;
+ 
+}
+
+
+
+ul li a:hover
+{
+
+     font-size: 14px;
+    border-radius: 4px;
+  text-align: center;
+    margin: 10px;
+    padding: 10px;
+  word-spacing: 1em;
+   margin-top: auto;
+   
+  
+   
+  
+} 
+@media only screen and (max-width:1328px)
+{
+ul li a
+    {
+        
+        margin: 5px;
+    padding: 5px;
+     align-items: center;
+        height: 12px;
+        color: rgb(250, 226, 7);
+    }
+    
+   }
+/*
+ /* 
+ul li a:hover{
+    
+    color: #1b191a;
+    width: 5px;
+    height: 5px;
+    display: block;
+    
+    align-items: center;
+    text-decoration: none;
+    width: 13px; 
+    border-radius: 5px;
+   
+    
+}
+*/
+ul li a:link
+{
+display: inline-block ;
+width: 17em;
+height: 1rem;
+transition: 0.6s;
+text-align: center;
+margin-right: rem;
+min-width: 2px;
+min-height: 2px;
+text-decoration: none;
+color: orange;
+list-style: none;
+
+}
+   
+
+ul li a:link:hover
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    transition: all 0.5 ease;
+    height: 3rem;
+    justify-content: space-be;
+    
+
+}
+
+.i{
+    padding: 18px 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    top: 0%;
+    z-index: 999;
+    background-color: rgba(32, 31, 31, 0.5);
+    border-radius: 4px;
+}
+ 
+
+
+ul li .i
+{
+   margin: 12px;
+  padding: 12px;
+
+   
+}
+/*
+
+ul li .i:hover
+{
+    justify-content: center;
+    text-align: center;
+    
+    width: fit-content;
+    height: fit-content;
+     
+}
+
+*/
+
+
+.ten h1{
+    font-size: 45px;
+    padding: 250px;
+    color: white;
+    text-align: center;
+    font-family: bold;
+}
+.ten p{
+    font-size: 40px;
+    margin: 20px;
+    color: orange;
+    font-family: bold;
+   
+}
+.ten .bouton{
+    cursor: pointer;
+}
+.ten .paragraphe{
+    margin: 20px 10px;
+    
+}
+.ten .bouton{
+    color: #000;
+    margin: 20px 20px;
+    padding: 15px;
+    border-radius: 12px;
+    font-family: bold;
+}
+.ten .bouton:hover{
+    color: #fff;
+    background: orange;
+    border-radius: 12px;
+    
+}
+
+
+.ten h1{
+    font-size: 55px;
+    padding: 150px;
+    color: white;
+    text-align: center;
+    font-family: bold;
+    
+}
+.ten p{
+    font-size: 40px;
+    margin: 20px;
+    color: orange;
+    font-family: bold;
+   
+}
+.ten .bouton{
+    cursor: pointer;
+    text-align: center;
+    
+}
+.ten .paragraphe{
+    margin: 20px 10px;
+    
+}
+.ten .bouton{
+    color: #1a1818;
+    margin: 20px 20px 20px;
+    padding: 15px;
+    border-radius: 12px;
+    font-family: bold;
+   
+}
+.ten .bouton:hover{
+    color: #fff;
+    background: orange;
+    border-radius: 12px;
+   
+}
+
+@media only screen and (max-width:700px)
+{
+   
+    .ten p
+    {
+         font-size: 30px;
+        width: 100%;
+    }
+    .ten h1
+    {
+        font-size: 37px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+/*.er{
+    padding: 18px 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+    z-index: 999;
+    background-color: orange;
+}
+ul{
+    list-style: none;
+   display: flex;
+   
+}
+ul li a{
+    padding: 10px 100px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid transparent;
+    transition: 0.6 ease;
+}
+
+ul li a:hover{
+    background: #fff;
+    color: #000;
+}
+ 
+
+.ten h1{
+    font-size: 45px;
+    padding: 250px;
+    color: white;
+    text-align: center;
+    font-family: bold;
+}
+.ten p{
+    font-size: 40px;
+    margin: 20px;
+    color: orange;
+    font-family: bold;
+   
+}
+.ten .bouton{
+    cursor: pointer;
+}
+.ten .paragraphe{
+    margin: 20px 10px;
+    
+}
+.ten .bouton{
+    color: #000;
+    margin: 20px 20px;
+    padding: 15px;
+    border-radius: 12px;
+    font-family: bold;
+}
+.ten .bouton:hover{
+    color: #fff;
+    background: orange;
+    border-radius: 12px;
+    
+}*/
+
+/* A PROPOS*/
+
+#apropos{
+
+    background: linear-gradient(rgba(249, 247, 247, 0.5), rgba(188, 185, 185, 0.5)), url(photos/IMG-20241029-WA0030.jpg) ;
+    border-radius: 50px;
+}
+#apropos h1{
+    font-weight: bold;
+    text-align: center; 
+    padding: 10px 0 10px 0;
+    margin-bottom: 100px;
+    font-size: 45px;
+}
+.onze{
+    padding: 15px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.onze span{
+    color: orange;
+}
+.douze{
+    margin: 15px;
+}
+.treize{
+    margin: 15px;
+}
+.quatorze{
+    margin: 15px;
+}  
+.quinze{
+    margin: 15px;
+}
+.onze .seize{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* adresse */
+
+.adresse h2{
+    margin: 45px;
+    font-size: 55px;
+    text-align: center;
+    color: black;
+}
+.adresse p{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    padding: 30px;
+}
+
+/* BOUTIQUE*/
+
+.seventeen{
+    background: url(photos/IMG-20241029-WA0032.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+    padding: 10px;
+    
+}
+.seventeen .eighteen{
+    font-size: 50px;
+    font-family: bold;
+    align-items: center;
+    color: white;
+}
+.eighteen{
+    text-align: center;
+}
+.seventeen .nineteen span{
+    margin: 25px;
+    padding: 150px;
+    font-family: bold;
+    color: white;
+    font-size: 26px;
+
+}
+
+.vingt{
+    float: right;
+}
+.seventeen .vingt-un{
+    font-size: 30px;
+    font-family: bold;
+}
+.seventeen .vingt-un {
+    margin: 10px;
+    padding: 10px;
+    color: orange;
+    font-size: 30px;
+    font-family: bold;
+}
+
+.seventeen .vingt-deux{
+    cursor: pointer;
+    border-radius: 12px;
+    margin: 15px 20px;
+    padding: 3px;
+    font-family: bold;
+}
+.seventeen .vingt-deux:hover{
+    color: #fff;
+    background: orange;
+}
+
+/*animation de la fleche*/
+
+.seventeen .fleche{
+    padding: 10px;
+    margin: 20px;
+    font-size: 100px;
+    color: rgb(207, 233, 169);
+    transform: translateY(0);
+    animation: descendre 1s infinite;
+}
+ @keyframes descendre{
+        0%{
+            transform: translateY(0);
+        }
+        100%{
+            transform: translateY(5vh);
+        }
+ }
+
+.seventeen button{
+    color: black;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: bold;
+    margin: 10px;
+    padding: 7px;
+}
+.seventeen button:hover{
+    background-color: orange;
+    color: white;
+}
+
+/*vetements homme et femme*/
+/*
+.section_produits{
+    padding: 40px 5%;
+}*/
+
+
+/*vetements homme et femme*/
+
+.section_produits{
+    padding: 40px 5%;
+    padding-bottom: 1rem;
+    
+
+    cursor: pointer;
+}
+
+@media only screen and (max-width:1524px)
+{
+    .carte
+    {
+      /*  margin: 4px;
+    padding: 4px;
+     list-style: none;
+        height: 24px;*/
+     grid-column-start: 2;
+      
+    }
+
+   
+}
+
+.section_produits .carte:hover
+{
+    transform: scale(1.2);
+    transition: 0.6 ease;
+    transition: 0.6s;
+    
+}
+
+/*.section_produits img:hover
+{
+    object-fit: fill;
+}*/
+.section_produits img:hover
+{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transform: all 500ms ease-out;
+    transition: 0.6s;
+    padding-bottom: 1rem;
+}
+
+.section_produits img
+{
+    border-radius: 7px;
+    transition: 0.6 ease;
+}
+
+
+
+
+.produits{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 70px;
+   
+}
+.produits .carte{
+    width: 300px;
+    background: #dfdede;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10PX;
+    margin-bottom: 20px;
+ 
+}
+
+@media only screen and (max-width:600px)
+{
+  
+    .produit
+    {
+         margin-left: 20%;
+    }
+   .produit.carte
+   {
+    width: 250px;
+   }
+}  
+
+.produits .carte img{
+    height: 300px;
+    width: 100%;
+}
+.produits .carte .desc{
+    font-weight: 900;
+    font-size: 20px;
+    padding: 10 30px;
+
+}
+.produits .carte .titre{
+    padding: 5px 20px;
+    opacity: 0,8;
+    border-radius: 10PX;
+
+}
+.produits .carte .titre span{
+    color: orange;
+}
+.produits .carte .titre em{
+    color:  blue;
+}
+
+
+.produits .carte .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+.produits .carte .prix{
+    color: orange;
+    font-size: 20px;
+    font-weight: bold;
+}
+.produits .carte .achat{
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    padding: 10px 18x;
+    margin: 10px;
+    border-radius: 12px;
+    font-family: bold;
+}
+.produits .carte .box .achat:hover{
+    cursor: pointer;
+    background: orange;
+    color: white;
+
+}
+
+/*  section contact */
+
+#contact {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+#contact form {
+    display: flex;
+    background-color:rgba(0,0,0,0.05) ;
+    padding: 25px;
+    border-radius: 6px;
+    flex-direction: column;
+    width: 350px;
+}
+.form a{
+    margin-left: -250px;
+    color: black;
+}
+.form h1{
+    margin: 20px;
+    text-align: center;
+    align-items: center;
+    margin-left: 28px;
+}
+.form h2{
+    text-align: center;
+    color: black;
+
+}
+#contact form label {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+#contact form input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    outline: 0;
+}
+#contact form input:focus{
+    outline: 1px solid #27ae60
+}
+#contact form input[type="submit"] {
+margin-top: 15px;
+color: #fff;
+background-color: #F3D24C;
+border: 1px solid #F3D24C;
+}
+
+/* footer */
+
+.footer{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, auto));
+    gap: 2rem;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+}
+.footer-box h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+.footer-box a{
+    text-decoration: none;
+    color: var(--second-color);
+    margin-bottom: 0.8rem;
+    transition: all .50s ease;
+}
+.footer-box a:hover{
+    transform: translateX(-5px);
+    color: var(--text-color);
+}
+.social a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background: var(--text-color);
+    color: var(--bg-color);
+    font-size: 17px;
+    border-radius: 10px;
+    margin-right: 14px;
+    transform: transform 0.6s;
+}
+.social a:hover{
+    transform: rotate3d(0,0,1, 360deg) scale(1.06);
+    color: var(--bg-color);
+}
+
+
+.newsletter{
+    margin-right: px;
+}
+.newsletter-content{
+    margin: 105px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+    background: var(--text-color);
+    padding: 60px 70px;
+    border-radius: 28px;
+} 
+.newsletter-text h2{
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+}
+.newsletter-text p{
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--bg-color);
+}
+.newsletter-content form{
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    gap: 1rem;
+    border-radius: 15px;
+}
+.newsletter-content form input:first-child{
+    border:none;
+    outline: none;
+    padding: 15px;
+    background: var(--bg-color);
+    font-size: var(--p-font);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+@media only screen and (max-width:600px)
+{
+    .newsletter-content
+    {
+        justify-content: center;
+       align-items: center;
+       align-items: center;
+        grid-template-columns: none;
+       
+
+    }
+    .newsletter-content form input:first-child
+    
+    {
+        font-size: 10px;
+       display: flex;
+      
+      width: 100%;
+       
+        
+    }
+    .newsletter-text h2
+    { 
+        font-size: 20px;
+      
+    }
+}
+
+
+
+
+
+
+/*
+.newsletter{
+    margin-right: 55px;
+}
+.newsletter-content{
+    margin: 105px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    background: var(--text-color);
+    padding: 60px 70px;
+    border-radius: 28px;
+} 
+.newsletter-text h2{
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+}
+.newsletter-text p{
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--bg-color);
+}
+.newsletter-content form{
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    gap: 1rem;
+}
+.newsletter-content form input:first-child{
+    border:none;
+    outline: none;
+    padding: 15px;
+    background: var(--bg-color);
+    font-size: var(--p-font);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+*/
+
+footer{
+    background-color: rgb(37, 35, 35);
+    height: 10vh;
+ }
+ footer p{
+    color: white;
+    text-align: center;
+   padding: 26px;
+ }
+ footer p a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+ }
+ footer p a span{
+    color:  orange;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ *
+    {
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        scroll-padding-top: 2rem;
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+    }
+
+     
+       
+   #cart-icon
+   {
+    font-size: 1.8rem;
+    cursor: pointer;
+   }   
+    .add-cart
+    {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: black;
+        color: white;
+        padding: 5px;
+        cursor: pointer;
+       
+    }
+     
+    .add-cart:hover
+    {
+        background: hsl(249,32%,17%);
+    }
+    .cart
+    {
+        position: fixed;
+        top: 10%;
+      
+        width: 360px;
+        min-height: 200vh;
+        padding: 50px;
+        background: white;
+        box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+       transition: 0.3s;
+       right: -100%;
+    }
+    .cart.active
+    {
+       right: 0;
+    }
+    .cart-title
+    {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 2rem;
+    }
+    .cart-box
+    {
+       display: grid;
+      grid-template-columns: 32% 50% 18%;
+       align-items: center;
+       gap: 1rem;
+       margin-top: 1rem;
+
+    }
+    .cart-img
+    {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        padding: 10px;
+        border-radius: 2px;
+    }
+    .details-box
+    {
+        display: grid;
+        row-gap: 0.5rem;
+    }
+    .cart-produit-title
+    {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+       
+    }
+    .cart-price
+    {
+        font-weight: 500;
+    }
+    .cart-quantity
+    {
+        border: 1.5px solid rgb(161, 155, 155);
+        outline-color: rgb(104, 99, 99);
+        width: 2.4rem;
+        text-align: center;
+        font-size: 1rem;
+    }
+    .cart-remove
+    {
+        font-size: 24px;
+        color: orange;
+        cursor: pointer;
+    }
+    .total
+    {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1.5rem;
+        border-top: 1px solid black;
+    }
+    .total-title
+    {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .total-price
+    {
+        margin-left: 0.5rem;
+    }
+
+    .btn-buy
+    {
+        display: flex;
+        margin: 1.5rem auto 0 auto ;
+        padding: 12px 20px;
+        border: none;
+        background: red;
+        color: rgb(250, 247, 247);
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .btn-buy:hover
+    {
+        background: black;
+
+    }
+
+    #close-cart
+    {
+        position: absolute;
+        top: 1.9rem;
+        right: 0.5rem;
+        font-size: 2rem;
+        color: black;
+        cursor: pointer;
+    }
+    
+
+    @media only screen and (max-width:1524px)
+{
+    .cart
+    {
+      /*  margin: 4px;
+    padding: 4px;
+     list-style: none;
+        height: 24px;*/
+        grid-column-start: 2 ;
+    }
+
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+ </head>
+ <body>
+
+
+<nav class="er">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <a class="navbar-brand" href="#"></a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       <nav class="navbar"></nav>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <div class="i"><a class="nav-item" href="accueil.html">Accueil <span class="sr-only" >(current)</span></a></div> 
+           </li>
+           <li class="nav-item">
+               <div class="i"><a class="nav-item" href="À propos.html" >À propos</a></div>
+               
+               
+           
+
+           </li>
+           <li class="nav-item">
+            <div class="i"> <a class="nav-item" href="boutique.html">BOUTIQUE</a></div>
+           
+           </li>
+           <li class="nav-item">
+                <div class="i"> <a class="nav-item" href="contact.html" >Contact</a></div>
+           </li>
+       </ul>
+   </div>
+
+    </nav>
+  </nav>
+
+
+
+    <div class="conteneur"> 
+       <h5> 
+           <div class="one">Commandez au <br>+237 658 88 65 09</div>
+        </h5>
+       <h5>
+           <div class="two">LIVRAISON GRATUITE <span>A DOUALA</span></div>
+        </h5>
+        <h5>
+            <div class="three">PAIEMENT <span>SECURISE</span></div>
+        </h5> 
+       
+    </div>
+   <div class="conteneur2">
+    <a href="PRODUITS.html"><div class="five">produits</div></a>
+    <div class="six"><h1><span>♣ </span>Aliette<span>◘</span>Shopping</h1></div>
+    <a href="compte.html">
+        <div class="seven">Mon compte </div>
+    </a>
+    <a href="#">
+       <!-- <div class="eight">Ma wishlist</div>-->
+       <i class="bx bx-shopping-bag"id="cart-icon"></i>
+    </a>
+    <a href="commande.html">
+        <div class="nine">Mon panier</div>
+    </a>
+   </div>
+
+   <!--
+   <nav class="navbar">
+    <ul>
+        <li><a href="accueil.html">ACCUEIL</a></li>
+        <li> <a href="À propos.html"> A PROPOS</a></a></li>
+        <li><a href="boutique.html">BOUTIQUE</a></li>
+        <li><a href="#">BLOG</a></li>>
+        <li> <a href="contact.html">CONTACT</a></li>
+    </ul>
+   </nav>-->
+
+   
+
+
+
+
+
+
+
+   <!--header-->
+   <header>
+    <div class="principale">
+        <section id="accueil" class="ten">
+            <h1>Bienvenue dans notre boutique</h1>
+            <p class="paragraphe">Les Nouveaux catalogues avec des matières plus solide</p>
+            <button class="bouton">DECOUVRIR</button>
+         </section>
+    
+    </div>
+
+</header>
+
+<div class="adresse">
+    <h2>Nos Produits</h2>
+    <p>Venez nous rendre visite !</p>
+</div>
+    
+
+    <section class="section_produits">
+        <div class="center-text">
+            <h2></h2>
+        </div>
+        <div class="produits">
+            <div class="carte">
+                <div class="img"><img src="photos/IMG-20241029-WA0012.jpg"></div>
+                <div class="desc"> JOYCE PHIL</div>
+                <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+                <div class="box">
+                    <div class="prix"> 5000FCFA</div>
+                    <button class="achat">ajouter au panier</button>
+                </div>
+            </div>
+
+            <div class="carte">
+                <div class="img"><img src="photos/IMG-20241029-WA0013.jpg"></div>
+                <div class="desc">CROP-TOP</div>
+                <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+                <div class="box">
+                    <div class="prix">4000FCFA</div>
+                    <button class="achat">ajouter au panier</button>
+                </div>
+            </div>
+            
+            <div class="carte">
+                <div class="img"><img src="photos/IMG-20241029-WA0014.jpg"></div>
+                <div class="desc">justaucorps</div>
+                <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+                <div class="box">
+                    <div class="prix">6000FCFA</div>
+                    <button class="achat">ajouter au panier</button>
+                </div>
+            </div>
+
+            <div class="carte">
+                <div class="img"><img src="photos/IMG-20241029-WA0015.jpg"></div>
+                <div class="desc">JUPE JEANS NOEUD</div>
+                <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+                <div class="box">
+                    <div class="prix">7000FCFA</div>
+                    <button class="achat">ajouter au panier</button>
+                </div>
+            </div>
+
+
+            <div class="carte">
+                <div class="img"><img src="photos/IMG-20241029-WA0016.jpg"></div>
+                <div class="desc">CROP-TOP1</div>
+                <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+                <div class="box">
+                    <div class="prix">4000FCFA</div>
+                    <button class="achat">ajouter au panier</button>
+                </div>
+            </div>
+
+            <div class="carte">
+                <div class="img"><img src="photos/IMG-20241029-WA0017.jpg"></div>
+                <div class="desc">T-SHIRT 1</div>
+                <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+                <div class="box">
+                    <div class="prix">4000FCFA</div>
+                    <button class="achat">ajouter au panier</button>
+                </div>
+            </div>
+
+
+
+<div class="carte">
+    <div class="img"><img src="photos/IMG-20241029-WA0019.jpg"></div>
+    <div class="desc">T-SHIRT2</div>
+    <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+    <div class="box">
+        <div class="prix">4000FCFA</div>
+        <button class="achat">ajouter au panier</button>
+    </div>
+</div>
+<div class="carte">
+    <div class="img"><img src="photos/IMG-20241029-WA0021.jpg"></div>
+    <div class="desc">T-SHIRT3</div>
+    <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+    <div class="box">
+        <div class="prix">4000FCFA</div>
+        <button class="achat">ajouter au panier</button>
+    </div>
+</div>
+
+<div class="carte">
+    <div class="img"><img src="photos/IMG-20241029-WA0022.jpg"></div>
+    <div class="desc">T-SHIRT4</div>
+    <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+    <div class="box">
+        <div class="prix">4000FCFA</div>
+        <button class="achat">ajouter au panier</button>
+    </div>
+</div>
+
+<div class="carte">
+    <div class="img"><img src="photos/IMG-20241029-WA0023.jpg"></div>
+    <div class="desc">T-SHIRT5</div>
+    <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+    <div class="box">
+        <div class="prix">4000FCFA</div>
+        <button class="achat">ajouter au panier</button>
+    </div>
+</div>
+
+<div class="carte">
+    <div class="img"><img src="photos/IMG-20241029-WA0024.jpg"></div>
+    <div class="desc">T-SHIRT6</div>
+    <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+    <div class="box">
+        <div class="prix">4000FCFA</div>
+        <button class="achat">ajouter au panier</button>
+    </div>
+</div>
+
+<div class="carte">
+    <div class="img"><img src="photos/IMG-20241029-WA0025.jpg"></div>
+    <div class="desc">T-SHIRT7</div>
+    <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+    <div class="box">
+        <div class="prix">4000FCFA</div>
+        <button class="achat">ajouter au panier</button>
+    </div>
+</div>
+
+<div class="carte">
+    <div class="img"><img src="photos/IMG-20241029-WA0026.jpg"></div>
+    <div class="desc">T-SHIRT8</div>
+    <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+    <div class="box">
+        <div class="prix">4000FCFA</div>
+        <button class="achat">ajouter au panier</button>
+    </div>
+</div>
+
+<div class="carte">
+    <div class="img"><img src="photos/IMG-20241029-WA0027.jpg"></div>
+    <div class="desc">T-SHIRT9</div>
+    <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+    <div class="box">
+        <div class="prix">4000FCFA</div>
+        <button class="achat">ajouter au panier</button>
+    </div>
+</div>
+
+<div class="carte">
+    <div class="img"><img src="photos/IMG-20241029-WA0028.jpg"></div>
+    <div class="desc">T-SHIRT10</div>
+    <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+    <div class="box">
+        <div class="prix">4000FCFA</div>
+        <button class="achat">ajouter au panier</button>
+    </div>
+</div>
+
+<div class="carte">
+    <div class="img"><img src="photos/IMG-20241029-WA0029.jpg"></div>
+    <div class="desc">T-SHIRT11</div>
+    <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+    <div class="box">
+        <div class="prix">4000FCFA</div>
+        <button class="achat">ajouter au panier</button>
+    </div>
+</div>
+
+<div class="carte">
+    <div class="img"><img src="photos/IMG-20241029-WA0030.jpg"></div>
+    <div class="desc">T-SHIRT12</div>
+    <div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+    <div class="box">
+        <div class="prix">4000FCFA</div>
+        <button class="achat">ajouter au panier</button>
+    </div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0031.jpg"></div>
+<div class="desc">T-SHIRT13</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0032.jpg"></div>
+<div class="desc">T-SHIRT14</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0033.jpg"></div>
+<div class="desc">T-SHIRT15</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0034.jpg"></div>
+<div class="desc">T-SHIRT16</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0035.jpg"></div>
+<div class="desc">T-SHIRT17</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0036.jpg"></div>
+<div class="desc">T-SHIRT18</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0037.jpg"></div>
+<div class="desc">T-SHIRT19</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0038.jpg"></div>
+<div class="desc">T-SHIRT20</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0039.jpg"></div>
+<div class="desc">T-SHIRT21</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0040.jpg"></div>
+<div class="desc">T-SHIRT22</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0041.jpg"></div>
+<div class="desc">T-SHIRT23</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0042.jpg"></div>
+<div class="desc">T-SHIRT24</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0043.jpg"></div>
+<div class="desc">T-SHIRT25</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0044.jpg"></div>
+<div class="desc">T-SHIRT26</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0045.jpg"></div>
+<div class="desc">T-SHIRT27</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0047.jpg"></div>
+<div class="desc">T-SHIRT28</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0048.jpg"></div>
+<div class="desc">T-SHIRT29</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0049.jpg"></div>
+<div class="desc">T-SHIRT30</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+
+<div class="carte">
+<div class="img"><img src="photos/IMG-20241029-WA0050.jpg"></div>
+<div class="desc">T-SHIRT31</div>
+<div class="titre">couleurs disponibles : ○<span>○</span><em>○</em></div>
+<div class="box">
+    <div class="prix">4000FCFA</div>
+    <button class="achat">ajouter au panier</button>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="cart" >
+    
+    <h2 class="cart-title">  Ma Liste</h2>
+
+<div class="cart-conten">
+<div class="cart-box">
+    <img src="photos/IMG-20241029-WA0010.jpg" alt="">
+
+ <div class="detail-box">
+    <div class="cart-produit-title">Earbuds</div>
+    <div class="cart-price">4000FCFA</div>
+    <input type="number" value="1" class="cart-quantity">
+ </div>
+  <i class="bx bxs-trash-alt cart-remove"></i>
+</div>
+</div>
+
+
+
+<div class="cart-conten">
+<div class="cart-box">
+   <img src="photos/IMG-20241029-WA0012.jpg" alt="">
+<div class="detail-box">
+   <div class="cart-produit-title">Earbuds</div>
+   <div class="cart-price">4000FCFA</div>
+   <input type="number" value="1" class="cart-quantity">
+</div>
+ <i class="bx bxs-trash-alt cart-remove"></i>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="cart-conten">
+<div class="cart-box">
+   <img src="photos/IMG-20241029-WA0012.jpg" alt="">
+<div class="detail-box">
+   <div class="cart-produit-title">Earbuds</div>
+   <div class="cart-price">4000FCFA</div>
+   <input type="number" value="1" class="cart-quantity">
+</div>
+ <i class="bx bxs-trash-alt cart-remove"></i>
+</div>
+</div>
+
+
+
+
+<div class="cart-conten">
+<div class="cart-box">
+   <img src="photos/IMG-20241029-WA0013.jpg" alt="">
+<div class="detail-box">
+   <div class="cart-produit-title">Earbuds</div>
+   <div class="cart-price">4000FCFA</div>
+   <input type="number" value="1" class="cart-quantity">
+</div>
+ <i class="bx bxs-trash-alt cart-remove"></i>
+</div>
+</div>
+
+
+
+
+
+<div class="cart-conten">
+<div class="cart-box">
+   <img src="photos/IMG-20241029-WA0014.jpg" alt="">
+<div class="detail-box">
+   <div class="cart-produit-title">Earbuds</div>
+   <div class="cart-price">4000FCFA</div>
+   <input type="number" value="1" class="cart-quantity">
+</div>
+ <i class="bx bxs-trash-alt cart-remove"></i>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="cart-conten">
+<div class="cart-box">
+   <img src="photos/IMG-20241029-WA0015.jpg" alt="">
+<div class="detail-box">
+   <div class="cart-produit-title">Earbuds</div>
+   <div class="cart-price">4000FCFA</div>
+   <input type="number" value="1" class="cart-quantity">
+</div>
+ <i class="bx bxs-trash-alt cart-remove"></i>
+</div>
+</div>
+
+
+
+
+
+
+<div class="cart-conten">
+<div class="cart-box">
+   <img src="photos/IMG-20241029-WA0011.jpg" alt="">
+<div class="detail-box">
+   <div class="cart-produit-title">Earbuds</div>
+   <div class="cart-price">4000FCFA</div>
+   <input type="number" value="1" class="cart-quantity">
+</div>
+ <i class="bx bxs-trash-alt cart-remove"></i>
+</div>
+</div>
+
+
+
+
+
+<div class="cart-conten">
+<div class="cart-box">
+   <img src="photos/IMG-20241029-WA0013.jpg" alt="">
+<div class="detail-box">
+   <div class="cart-produit-title">Earbuds</div>
+   <div class="cart-price">4000FCFA</div>
+   <input type="number" value="1" class="cart-quantity">
+</div>
+ <i class="bx bxs-trash-alt cart-remove"></i>
+</div>
+</div>
+
+
+<div class="cart-conten">
+<div class="cart-box">
+   <img src="photos/IMG-20241029-WA0012.jpg" alt="">
+<div class="detail-box">
+   <div class="cart-produit-title">Earbuds</div>
+   <div class="cart-price">4000FCFA</div>
+   <input type="number" value="3" class="cart-quantity">
+</div>
+ <i class="bx bxs-trash-alt cart-remove"></i>
+</div>
+</div>
+
+
+<div class="total">
+
+<div class="total-title">Total</div>
+<div class="total-price">0FCFA</div>
+
+</div>
+<button type="button" class="btn-buy">Buy Now</button> 
+<i class="bx bx-x id " id="close-cart"></i>
+
+</div>  
+</div>
+
+
+
+
+
+</section>
+
+<!--- newsletter section --->
+<section class="newsletter">
+<div class="newsletter-content">
+   <div class="newsletter-text">
+       <h2>Get on the List!</h2>
+       <p> Sign up with your email address to receive updates.</p>
+   </div>
+   <form action="" class="pi">
+       <input type="email" placeholder="your email..." required>
+       <input type="submit" value="Suscribe" class="btnnn">
+   </form>
+</div>
+</section>
+
+ <!--- footer --->
+<section class="footer">
+<div class="footer-box">
+   <h3>Company</h3>
+   <a href="#">About</a>
+   <a href="#">Features</a>
+   <a href="#">Works</a>
+   <a href="#">Career</a>
+</div>
+
+<div class="footer-box">
+   <h3>FAQ</h3>
+   <a href="#">Account</a>
+   <a href="#">About</a>
+   <a href="#">Career</a>
+   <a href="#">Works</a>
+</div>
+
+<div class="footer-box">
+   <h3>Resources</h3>
+   <a href="#">youtube playlist</a>
+   <a href="#">About</a>
+   <a href="#">Payment</a>
+</div>
+
+<div class="footer-box">
+   <h3>Social</h3>
+   <div class="social">
+   <a href="#"><i class="fa-brands fa-twitter"></i></a>
+   <a href="#"><i class="fa-brands fa-youtube"></i></a>
+   <a href="#"><i class="fa-brands fa-facebook"></i></a>
+   </div>
+</div>
+
+</section>
+
+<footer>
+<p>copyright <a href="#"> <span>♣</span>Aliette<span>◘</span>Shopping</a></p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+
+
+let cartIcon = document.querySelector('#cart-icon');
+let cart = document.querySelector('.cart');
+let closeCart = document.querySelector('#close-cart');
+
+
+cartIcon.onclick = () => {
+cart.classList.add('active');
+};
+
+closeCart.onclick = () => {
+cart.classList.remove('active');
+};
+
+if (document.readystate == 'loading'){
+document.addEventListener('DOMcontentLoaded', ready);
+}else
+{
+ready();
+}
+function ready(){
+var reomveCartButtons = document.getElementsByClassName('cart-remove');
+console.log(reomveCartButtons);
+for(var i = 0; i < reomveCartButtons.length; i++){
+   var button = reomveCartButtons[i];
+   button.addEventListener('click' ,reomveCartItem);
+}
+
+var quantityInput = document.getElementsByClassName('cart-quantity');
+for(var i = 0;i < quantityInput.length; i++ ){
+      var input = quantityInput[i];
+      input.addEventListener('change', quantityChanged);
+}
+
+}
+
+function reomveCartItem(envent)
+{
+var buttonClicked = envent.target;
+buttonClicked.parentElement.remove();
+updcatetotal();
+}
+function quantityChange(envent){
+var input = event.target
+if (isNaN(input.value) || input.value <= 0 ){
+   input.value = 1
+}
+updatetotal();
+}
+function updatetotal(){
+var cartContent = document.gentElementsByClassName('cart-content')[0];
+var cartBoxes = cartContent.getElementsByClassName('cart-box');
+var total = 0;
+for (var i = 0; i < cartBoxes.length; i++)
+{
+var cartBox  = cartBoxes[i];
+var princeElement = cartbox.getElementsByClassName('cart-price')[0];
+var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];
+var price = parsetFloat(princeElement.innerText. replace('$', ''));
+var quality = quantityElement.value;
+total= total + (price * quality);
+
+
+document.getElementsByClassName('total-price')[0].innerText = '$' + total
+}
+}
+
+
+
+
+
+</script>
+
+
+   
+    
+    
+    
+
+
+ </body>
+</html>
+
+          
